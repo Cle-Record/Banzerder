@@ -1,0 +1,348 @@
+body{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+header{
+  box-shadow: 0 0.1rem 0.5rem dimgray;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  flex-wrap: wrap;
+  
+  
+}
+span{
+  font-size: 1.49rem;
+  color: dimgrey;
+}
+a img{
+  width: 1.60rem;
+  height: 1.60rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-right: 0.15rem;
+}
+.section {
+  display: none;
+}
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+ #lupa{
+   position: absolute;
+   right: 1rem;
+   top: 0rem;
+ }
+         .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden; /* Adicionado para corrigir possíveis problemas com imagens */
+        }
+        .item h2 {
+            margin-top: 0;
+        }
+        .item p {
+            margin-bottom: 10px;
+        }
+        .item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .item a {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+     #messages {
+    width: 100%;
+    height: calc(100% - 50px);
+
+    overflow-y: scroll;
+    padding: 10px;
+    box-sizing: border-box;
+  
+     
+  
+  
+}
+#section2{
+ 
+height: 90vh;  
+}
+
+#sendMsg {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 16px;
+    display: flex;
+   
+    align-items: center;
+    box-shadow: 0 0.1rem 0.5rem dimgray;
+   z-index: 1;
+   background: white;
+
+}
+
+#msgTxt {
+    width: calc(100% - 100px);
+    height: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+  
+    border: 1px solid dimgray;
+    border: 1px solid red;
+    background: black;
+    color: dimgray;
+    font-size: 16px;
+    
+}
+
+#msgBtn{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.outer {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+}
+
+#inner {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.me {
+    background: white; /* Verde do WhatsApp */
+    border: 1px solid dimgray;
+    padding: 16px;
+    color: dimgrey;
+    align-self: flex-end;
+    font-family: 'Times New Roman', Times, serif;
+}
+.me button{
+  margin-left: 3rem;
+  background: none;
+  outline: none;
+  border: dimgrey;
+  color: dimgrey;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+.me button:hover{
+  color: red;
+}
+
+.notMe {
+    background: #fff; /* Cinza claro do WhatsApp */
+    color: black;
+    border: 1px solid;
+}
+
+/* Estilo para o botão de exclusão de mensagens */
+.deleteBtn {
+    display: none;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+/* Exibir o botão de exclusão ao passar o mouse na mensagem */
+.message:hover .deleteBtn {
+    display: block;
+}
+
+/* Animação ao passar o mouse sobre o botão de exclusão */
+.deleteBtn:hover {
+    opacity: 0.8;
+}
+
+
+
+#msgTxt {
+    width: calc(100% - 100px);
+    height: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 25px; /* Adiciona bordas arredondadas */
+}
+
+
+
+
+
+
+
+        #videoContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .videoItem {
+            width: calc(100% - 10px);
+            margin-bottom: 20px;
+        }
+        .videoItem video {
+            width: 100%;
+        }
+        .reactionButtons {
+            margin-top: 10px;
+         display: flex;
+         justify-content: space-between;
+        
+        }
+       button{
+         border-radius: 20px;
+         margin-left: 2rem;
+         background-image: linear-gradient(dimgray,lightgray);
+       }
+        .likedVideos,
+        .dislikedVideos {
+            margin-top: 20px;
+        }
+        .likedVideos iframe,
+        .dislikedVideos iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            padding: 16px;
+            width: 50px;
+        }
+        
+       .cabecalhosa{
+background-image: url("img/fundoperfil.png");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+         display: flex;
+         justify-content: space-between;
+       
+         display: flex;
+         padding: 16px;
+       /*  box-shadow: 0 0.1rem 0.5rem;
+       }*/}
+       .cabecalhosa img{
+         width: 6rem;
+         background: black;
+         height: 6rem;
+         border: 1px solid dimgrey;
+         border-radius: 40px;
+         
+       }
+       #nomes{
+      
+         font-size: 16px;
+       }
+       .descrever{
+         background: whitesmoke;
+       
+        padding: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 16px;
+       }
+       .descrever span{
+         font-size: 16px;
+         
+       }
+       #des{
+         font-size: 16px;
+         margin-left: 1rem;
+       }
+       
+       
+       
+       
+       
+       
+       
+   .game-pics {
+  margin-top: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.game-pics::-webkit-scrollbar {
+  display: none;
+}
+
+.game-pics img {
+  border-radius: 8px;
+  width: 35%;
+  display: inline-block;
+  margin: 3px;
+}
+#nomes{
+  margin-right: 2rem;
+}
+#passwords{
+  margin-right: 2rem;
+}
+#idades{
+  margin-right: 2rem;
+}
+#sexo{
+  margin-right: 2rem;
+}
+#redefi{
+  background-image: linear-gradient(whitesmoke,ghostwhite);
+  width: 40%;
+  border: 1px solid whitesmoke;
+  color: palevioletred;
+  padding: 16px;
+}
+#editar{
+  border: 1px solid dimgray;
+  border-radius: 40px;
+  background: whitesmoke;
+ 
+  width: 2rem;
+  height: 2rem;
+}
+
+
+
+/* Estilo para um único botão */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Pseudo-classe para hover */
+button:hover {
+  background-color: #2980b9; /* Cor de fundo do botão ao passar o mouse */
+}

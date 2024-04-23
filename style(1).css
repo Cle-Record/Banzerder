@@ -1,0 +1,54 @@
+body {
+    font-size: 15pt;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    
+    
+
+}
+#load{
+  width: 250px;
+  height: 250px;
+  margin-top: 60%;
+  
+}
+.div1{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 40px;
+  background: black;
+}
+.div2{
+width: 2rem;
+height: 2rem;
+border-radius: 40px;
+  background: black;
+}
+.div3{
+  width: 3rem;
+height: 3rem;
+border-radius: 40px;
+margin-left: 2rem;
+background: black;
+}
+
+.div4 {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 40px;
+  margin-left: 2rem;
+  background: black;
+}
+.div5 {
+  width: 50%;
+  height: 10vh;
+  border-radius: 40px;
+  margin-left: 2rem;
+  background: black;
+}
+.dives{
+  display: flex;
+  padding: 8rem;
+  margin-top: 80%;
+  justify-content: space-between;
+}

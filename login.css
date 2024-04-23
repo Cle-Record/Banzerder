@@ -1,0 +1,80 @@
+body{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+      .juk {
+        display: flex;
+        padding: 32px;
+        justify-content: space-between;
+      }
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  font-size: 1.78rem;
+  color: dimgray;
+  font-family: 'Impact', Arial Black, sans-serif;
+  box-shadow: 0 0.1rem 0.5rem dimgrey;
+}   
+
+.elemento {
+  font-family: 'Impact', Arial Black, sans-serif;
+}
+.inputgroup{
+  width: 90%;
+  height: 3rem;
+  border: 1px solid dimgrey;
+  border-radius: 20px;
+}
+#email, password{
+  outline: none;
+  border: none;
+}
+#password{
+  outline: none;
+border: none;
+width: 90%;
+margin-top: 1rem;
+}
+#nome{
+outline: none;
+border: none;
+width: 90%;
+margin-top: 1rem;
+}
+#email{
+outline: none;
+border: none;
+width: 90%;
+margin-top: 1rem;
+}
+input{
+  color: dimgray;
+  
+}
+#options{
+  width: 90%;
+  border-radius: 20px;
+  background: white;
+  color: dimgrey;
+  border: 1px solid dimgray;
+  padding: 16px;
+  outline: none;
+}
+button{
+  width: 90%;
+  height: 3rem;
+  border: 1px solid dimgray;
+  background-image: linear-gradient(dimgray,#42445A);
+  
+  color: white;
+  font-size: 16px;
+  
+  border-radius: 20px;
+}
+label{
+  color: dimgrey;
+}
+a{
+  color: darkgrey;
+}

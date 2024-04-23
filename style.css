@@ -1,0 +1,49 @@
+      body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          position: relative; /* Adicionado */
+      }
+
+      .loader-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .loader {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 5px;
+         /* Cinza */
+          animation: changeColor 2s linear infinite;
+      }
+
+      @keyframes changeColor {
+          0%, 25% { background-color: #ccc; } /* Cinza */
+          30%, 50% { background-color: #000; } /* Preto */
+          55%, 100% { background-color: #ccc; } /* Cinza */
+      }
+
+      h1 {
+          font-family: Arial, sans-serif;
+          color: #333;
+          margin-top: 0.4rem;
+      }
+
+      /* Estilo para a imagem */
+      img {
+          
+          z-index: 1; /* Para ficar acima das esferas */
+      }
+      img{
+          width: 4rem;
+          height: 4rem;
+          border-radius: 40px;
+          
+      }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banzer</title>
+  <link rel="stylesheet" href="anime.css">
+</head>
+<body>
+  <header>
+    <span>Banzer</span>
+    <a href="pesquisa.html"><img src="img/lupa.png" alt="lupa" id="lupa"></a>
+    <nav>
+      <a href="#section1"><img src="img/noticias.png" alt=""></a>
+      <a href="#section2"><img src="img/conversacao.png" alt=""></a>
+      <a href="#section3"><img src="img/videoicon.png" alt=""></a>
+      <a href="#section4"><img src="img/utilizador.png" alt=""></a>
+      
+
+   
+  
+    </nav>
+  </header>
+
+  <section id="section1" class="section active">
+    <div class="container" id="content"></div>
+  </section>
+
+  <section id="section2" class="section">
+        <div id="messages"></div>
+
+    <div id="sendMsg">
+      <input type="text" id="msgTxt" placeholder="ENTER YOUR MSG...">
+      <img src="img/enviar.png" id="msgBtn" value="send" onclick="module.sendMsg()">
+    </div>
+  </section>
+
+  <section id="section3" class="section">
+   <div id="videoContainer"></div>
+  </section>
+
+  <section id="section4" class="section">
+ <div class="cabecalhosa">
+   <img src="" alt="foto" id="foto">
+ </div>
+ <br>
+ <div class="descrever">
+<span>Nome de utilizador</span>
+   <span id="nomes">Bartolomeu</span>
+ </div>
+ <br>
+ <div class="descrever">
+   <span>password</span>
+   <span id="passwords"></span>
+ </div>
+ 
+  <br>
+ <div class="descrever">
+   <span>idade</span>
+   <span id="idades"></span>
+ </div>
+ <br>
+ <div class="descrever">
+   <span>sexo</span>
+   <span id="sexo"></span>
+ </div>
+
+ <br>
+ <span id="des">Videos que gostas</span>
+ 
+    <div id="likedVideos"  class="game-pics">
+      
+     
+    </div>
+
+
+
+
+
+  <span id="des">Não gosto destes vídeos</span>  
+    <div id="dislikedVideos" class="game-pics"></div>
+     <br>
+   
+
+  </section>
+  
+    <script>
+      module = {};
+    </script>
+    
+    <script type="module" src="animes.js"></script>
+  <script src="video.js"></script>
+</body>
+
+</html>

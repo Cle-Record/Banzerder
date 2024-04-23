@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banzer</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<header class="banzerCabecalho">
+  <span>Banzer</span>
+</header>
+<br><br>
+<center>
+    <div class="body">
+        <div class="container">
+          
+            <form id="loginForm">
+                <div class="inputgroup">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <br>
+                <div class="inputgroup">
+                    <input type="password" id="password" placeholder="Senha" required>
+                </div>
+                <br>
+                <button type="submit" class="btn">Entrar</button>
+                <br><br>
+                <span>Ainda não tenho conta?<a href="sigUp.html">Criar conta</a></span>
+            </form>
+        </div>
+    </div>
+</center>
+
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+<script src="login.js"></script>
+
+<script>
+    // Adicionando eventos de escuta para transformar texto em minúsculas e remover espaços
+    document.getElementById('email').addEventListener('input', function() {
+        this.value = this.value.toLowerCase().trim();
+    });
+
+    document.getElementById('password').addEventListener('input', function() {
+        this.value = this.value.trim();
+    });
+</script>
+
+</body>
+</html>

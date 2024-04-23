@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banzer</title>
+    
+    <link rel="stylesheet" href="singp.css">
+</head>
+
+<body>
+<header class="banzerCabecalho">
+  <span>Banzer</span>
+</header>
+<br><br>
+<div class="body">
+    <div class="container">
+        <center>
+<form id="signupForm">
+   <div class="inputgroup">
+   <input type="text" placeholder="Nome de utilizador" id="nome">
+      </div>
+      <br>
+                <div class="inputgroup"> 
+  <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <br>
+                <div class="inputgroup">
+             
+                    <input type="password" id="password" placeholder="Deve ter no minimo 6 digitos" required>
+                </div>
+                <br>
+    <div class="inputgroup">
+
+     <input type="number" id="idade" placeholder="Quantos anos tem?" required>
+                </div><br>
+                <select id="options">
+
+                    <option value="animes">Animes</option>
+                </select>
+                
+                
+                
+                
+                <div class="juk">
+
+  <label for="option1"><input type="radio" id="option1" name="option" value="Masculino">Masculino</label><br> 
+
+  <label for="option2"><input type="radio" id="option2" name="option" value="Feminino">Feminino</label>
+  
+  </div>
+           
+                <button type="submit" class="btn">Criar Conta</button>
+                <br>
+                <br>
+                <span>Já tenho uma conta?<a href="login.html">Faça login</a></span>
+            </form>
+        </center>
+    </div> 
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+<script  src="singUp.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Notícias e Vídeos</title>
+    <link rel="stylesheet" href="pesquisa.css">
+   
+</head>
+<body>
+ <div class="pesquisas">
+<input type="text" id="searchInput" placeholder="Digite sua pesquisa">
+    <img src="img/lupa.png" onclick="searchContent()"> 
+ </div>
+
+    
+    
+    
+    <div class="container" id="content"></div>
+
+    <script>
+        // Função para buscar notícias relacionadas ao termo de pesquisa
+        function fetchNews(searchTerm) {
+            const apiKey = "6cb1daff61e445efbb4d92ba33b29b54";
+            const url = `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${apiKey}`;
+
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => data.articles)
+                .catch(error => {
+                    console.error("Erro ao buscar notícias:", error);
+                    return [];
+                });
+        }
+
+        // Função para buscar vídeos relacionados ao termo de pesquisa
+        function fetchVideos(searchTerm) {
+            const apiKey = "43462414-0c8301424d45da5b11208da34";
+            const url = `https://pixabay.com/api/videos/?key=${apiKey}&q=${searchTerm}`;
+
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => data.hits)
+                .catch(error => {
+                    console.error("Erro ao buscar vídeos:", error);
+                    return [];
+                });
+        }
+
+        // Função para limpar o conteúdo exibido na tela
+        function clearContent() {
+            const content = document.getElementById("content");
+            content.innerHTML = "";
+        }
+
+        // Função para exibir notícias
+        function displayNews(articles) {
+            const content = document.getElementById("content");
+            articles.forEach(article => {
+                const item = document.createElement("div");
+                item.classList.add("item");
+                item.innerHTML = `
+                    <h2>${article.title}</h2>
+                    <p>${article.description}</p>
+                    <img src="${article.urlToImage}" alt="${article.title}">
+                    <a href="${article.url}" target="_blank">Leia mais</a>
+                `;
+                content.appendChild(item);
+            });
+        }
+
+        // Função para exibir vídeos
+        function displayVideos(videos) {
+            const content = document.getElementById("content");
+            videos.forEach(video => {
+                const item = document.createElement("div");
+                item.classList.add("item");
+                item.innerHTML = `
+                    <h2>${video.user}</h2>
+                    <video controls>
+                        <source src="${video.videos.tiny.url}" type="video/mp4">
+                        Seu navegador não suporta o vídeo.
+                    </video>
+                `;
+                content.appendChild(item);
+            });
+        }
+
+        // Função para exibir tela preta se não houver conteúdo
+        function displayBlackScreen() {
+            const content = document.getElementById("content");
+            content.innerHTML = '<div class="black-screen">Nenhum conteúdo relacionado encontrado.</div>';
+        }
+
+        // Função principal de pesquisa
+        async function searchContent() {
+            const searchTerm = document.getElementById("searchInput").value.trim();
+
+            if (searchTerm === "") {
+                console.error("Digite um termo de pesquisa válido.");
+                return;
+            }
+
+            clearContent();
+
+            const [news, videos] = await Promise.all([fetchNews(searchTerm), fetchVideos(searchTerm)]);
+
+            if (news.length === 0 && videos.length === 0) {
+                displayBlackScreen();
+            } else {
+                displayNews(news);
+                displayVideos(videos);
+            }
+        }
+    </script>
+</body>
+</html>
