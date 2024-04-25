@@ -3,97 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cooking News</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(rgb(80,80,90),rgb(1,2,2));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: "Italianno", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-  }
-  h1 {
-    color: whitesmoke;
-    text-align: center;
-  }
-  .cabeca {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 16px;
-    background-image: linear-gradient(rgb(80, 80, 80), rgb(20, 2, 22));
-  }
-  nav {
-    display: flex;
-    align-items: center;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-    margin-left: 1rem;
-  }
-  #logo {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 20px;
-  }
-  .news-item {
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  .news-image {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  p {
-    overflow-y: auto;
-  }
-  @media (max-width: 768px) {
-    .news-item {
-      padding: 10px;
-    }
-  }
-</style>
+<title>Notícias da Tesla</title>
 </head>
 <body>
-<header class="cabeca">
-  <span>chow</span>
-  <nav>
-    <a href="home.html">
-      <img src="img/silhueta-de-icone-de-casa.png" alt="" id="logo">
-    </a>
-    <a href="/livros.html">
-      <img src="img/livro-de-receitas.png" alt="receitas" id="logo">
-    </a>
-    <a href="chefes.html">
-      <img src="img/chefe-de-cozinha.png" alt="" id="logo">
-    </a>
-    <img src="img/cafeteria.png" alt="" id="logo" onclick="desativado()">
-  </nav>
-</header>
-<h1>Cooking News</h1>
+<h1>Notícias da Tesla</h1>
 <div id="news"></div>
 <script>
-  const apiKey = '6cb1daff61e445efbb4d92ba33b29b54';
-  const apiUrl = `https://newsapi.org/v2/everything?q=culinary&apiKey=${apiKey}`;
+  const apiKey = '6968d2fca5754ee8b0cec4d28cc519d8';
+  const apiUrl = 'https://newsapi.org/v2/everything?q=tesla&from=2024-03-25&sortBy=publishedAt';
 
-  async function fetchCookingNews() {
+  async function fetchTeslaNews() {
     try {
-      const response = await fetch(apiUrl);
+      const response = await fetch(apiUrl, {
+        headers: {
+          'X-Api-Key': apiKey
+        }
+      });
       const data = await response.json();
       displayNews(data.articles);
     } catch (error) {
-      console.error('Erro ao buscar notícias:', error);
+      console.error('Erro ao buscar notícias da Tesla:', error);
     }
   }
 
@@ -101,10 +30,9 @@
     const newsContainer = document.getElementById('news');
     articles.forEach(article => {
       const newsItem = document.createElement('div');
-      newsItem.classList.add('news-item');
       newsItem.innerHTML = `
         <h2>${article.title}</h2>
-        <img class="news-image" src="${article.urlToImage}" alt="${article.title}">
+        <img src="${article.urlToImage}" alt="${article.title}">
         <p>${article.description}</p>
         <a href="${article.url}" target="_blank">Leia mais</a>
       `;
@@ -112,7 +40,7 @@
     });
   }
 
-  fetchCookingNews();
+  fetchTeslaNews();
 </script>
 </body>
 </html>
